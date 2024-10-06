@@ -28,8 +28,8 @@ return (
               <input
                 type={type}
                 value={value}
-               
-                placeholder={` ${userValue} `}
+                onChange={(e) => setValue(e.target.value)}
+                placeholder={`Enter ${label}`}
               />
             )}
           </label>
