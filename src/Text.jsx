@@ -11,10 +11,14 @@ function TextElements (props) {
         width: '500px',
         height: '250px',
     }
+    const handleChange = (event) => {
+        setInputText(event.target.value);
+      };
 
     return (
         <>
         <textarea 
+        rows={10}
         style={styleObj}
         type = "text"
         value = {textElements}

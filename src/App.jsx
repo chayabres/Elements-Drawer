@@ -1,22 +1,15 @@
-import { useState } from 'react'
 import TextElements from './Text.jsx';
 import DynamicElement from './DynamicElement.jsx';
 
 function App() {
-
-
-  
   function CallBack(text){
-
-
     return (
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 2fr)', gridTemplateRows: 'repeat(2, auto)', gap: '10px' }}>
+      <div style={{ display: 'grid' }}>
         {text.split('\n').map((item, index) => {
           const fields = item.split(';'); 
   
           if (fields.length >= 5) {
             return (
-              <div style={{ margin: '10px 0' }} key={index}>
               <DynamicElement 
                 key={index} 
                 line={fields[0]}
@@ -25,7 +18,6 @@ function App() {
                 label={fields[2]} 
                 userValue={fields[4]} 
               />
-              </div>
             );
           }
   
@@ -33,11 +25,7 @@ function App() {
         })}
       </div>
     );
-
-
   }
-
-
   return (
     <TextElements handleCallback = {CallBack} /> 
   )
