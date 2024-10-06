@@ -29,7 +29,7 @@ return (
                 type={type}
                 value={value}
                
-                placeholder={`Enter ${label}`}
+                placeholder={` ${userValue} `}
               />
             )}
           </label>

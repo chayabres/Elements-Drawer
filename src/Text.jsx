@@ -11,9 +11,6 @@ function TextElements (props) {
         width: '500px',
         height: '250px',
     }
-    const handleChange = (event) => {
-        setInputText(event.target.value);
-      };
 
     return (
         <>
@@ -24,7 +21,6 @@ function TextElements (props) {
         value = {textElements}
         onChange = {(e) => setTextElements(e.target.value)}
         />
-        
         {props.handleCallback(textElements)}
         
         </>
